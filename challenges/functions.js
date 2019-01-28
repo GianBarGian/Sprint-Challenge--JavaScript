@@ -14,18 +14,23 @@
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+const consume = (x, y, cb) => cb(x, y);
+const add = (x, y) => x + y;
+const multiply = (x, y) => x * y;
+const greeting = (first_name, last_name) => `Hello ${first_name} ${last_name}, nice to meet you`;
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2,2,add)); // 4
+console.log(consume(10,16,multiply)); // 160
+console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+
 
 
 // ==== Closures ==== 
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: The children function has always access to all his parent(s) variables. The opposite is not true.
 
 
 const external = "I'm outside the function";
